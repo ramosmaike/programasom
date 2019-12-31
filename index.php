@@ -1,6 +1,6 @@
 <?php
 /*
-Este sistema foi programado por Maike Ramosss
+Este sistema foi programado por Maike Ramos
 */
 
 
