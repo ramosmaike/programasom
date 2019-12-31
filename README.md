@@ -1,1 +1,1 @@
-# programasom
+# programasom sistema de palestrante
