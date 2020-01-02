@@ -27,10 +27,11 @@ include_once 'includes/message.php';
             </thead>
 
             <div class="input-field col s12">
-                <input type="text" name="nome" id="nome">
+                <input type="text" name="palestrante" id="palestrante">
                 <label for="dia">Digite o nome do palestrante para consulta</label>
+
             </div>
-           
+
             <tbody>
                 <?php
 				$sql = "SELECT * FROM palestrantes ORDER BY palestrante ASC";
@@ -41,63 +42,45 @@ include_once 'includes/message.php';
 
 				while($dados = mysqli_fetch_array($resultado)):
 				?>
-            <tr>
-                <td><?php echo $dados['palestrante']; ?></td>
-                <td><?php echo $dados['dia']; ?></td>
-                <td><?php echo $dados['sala']; ?></td>
-                <td><?php echo $dados['sessao']; ?></td>
-                <td><?php echo $dados['ordem']; ?></td>
-                <td><?php echo $dados['caminho']; ?></td>
+                <tr>
+                    <td><?php echo $dados['palestrante']; ?></td>
+                    <td><?php echo $dados['dia']; ?></td>
+                    <td><?php echo $dados['sala']; ?></td>
+                    <td><?php echo $dados['sessao']; ?></td>
+                    <td><?php echo $dados['ordem']; ?></td>
+                    <td><?php echo $dados['caminho']; ?></td>
 
 
-                <!--<td><a href="editar.php?id=<?php echo $dados['id']; ?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
 
-					<td><a href="#modal<?php echo $dados['id']; ?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</i></a></td>
 
-					<td><a href="#moda<?php echo $dados['id']; ?>" class="btn-floating red"><i class="material-icons">C</i></a></td>-->
+                    </form>
 
-                <!-- Modal Structure -->
-                <div id="modal<?php echo $dados['id']; ?>" class="modal">
-                    <div class="modal-content">
-                        <h4>Opa!</h4>
-                        <p>Tem certeza que deseja excluir esse palestrante?</p>
-                    </div>
-                    <div class="modal-footer">
+    </div>
+</div>
 
-                        <form action="php_action/delete.php" method="POST">
-                            <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
-                            <button type="submit" name="btn-deletar" class="btn red">Sim, quero deletar</button>
-
-                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
-
-                        </form>
-
-                    </div>
-                </div>
-
-            </tr>
-            <?php 
+</tr>
+<?php 
 				endwhile;
 				else: ?>
 
-            <tr>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
+<tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+</tr>
 
-            <?php 
+<?php 
 				endif;
 			   ?>
 
-            </tbody>
-        </table>
-        <br>
-        <!--<a href="adicionar.php" class="btn">Adicionar palestrante</a>-->
-        <a href="secindex.php" class="btn green"> Lista de palestrante </a>
-    </div>
+</tbody>
+</table>
+<br>
+<!--<a href="adicionar.php" class="btn">Adicionar palestrante</a>-->
+<a href="secindex.php" class="btn green"> Lista de palestrante </a>
+</div>
 </div>
 
 <?php
