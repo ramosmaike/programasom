@@ -30,7 +30,7 @@ include_once 'includes/message.php';
                         <li><a href="index.php">Sistema Programasom</a></li>
                         <li><a href="secindex.php" target="_blank">Tela secretaria</a></li>
                         <li><a href="">Programador Maike Ramos</a></li>
-                        
+
                     </ul>
                 </div>
             </li>
@@ -77,9 +77,9 @@ include_once 'includes/message.php';
                     <td><?php echo $dados['ordem']; ?></td>
 
                     <td><?php echo $dados['caminho']; ?></td>
-                    
-                   <!-- <span id="conteudo"></span>-->
-                    
+
+                    <!-- <span id="conteudo"></span>-->
+
                     <td><?php echo $dados['arquivo']; ?></td>
                     <td></td>
 
