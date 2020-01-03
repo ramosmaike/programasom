@@ -29,7 +29,7 @@ include_once 'includes/message.php';
            
             <div class="input-field col s12">
 
-                <input action="secindex.php" method="POST" type="text" name="palestrante" id="palestrante">
+                <input type="text" name="palestrante" id="palestrante">
                 <label for="dia">Digite o nome do palestrante para consulta</label>
 
             </div>
@@ -38,7 +38,10 @@ include_once 'includes/message.php';
 
 
                 <?php
-                $sql = "SELECT * FROM palestrantes ORDER BY palestrante ASC";
+
+                // teste de select para trazer só por um nome select * from tb_dados WHERE palestrante like '%$consulta%'
+
+                $sql = "SELECT * FROM palestrantes WHERE palestrante LIKE '%$dados%'";
 				$resultado = mysqli_query($connect, $sql);
                
                 if(mysqli_num_rows($resultado) > 0):
