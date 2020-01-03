@@ -29,6 +29,7 @@ include_once 'includes/message.php';
                     <ul>
                         <li><a href="index.php">Sistema Programasom</a></li>
                         <li><a href="">Programador Maike Ramos</a></li>
+                        <li><a href="secindex.php" target="_blank">Tela secretaria</a></li>
                     </ul>
                 </div>
             </li>
