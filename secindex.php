@@ -26,21 +26,26 @@ include_once 'includes/message.php';
 
             </thead>
 
+           
             <div class="input-field col s12">
-                <input type="text" name="palestrante" id="palestrante">
+
+                <input action="secindex.php" method="POST" type="text" name="palestrante" id="palestrante">
                 <label for="dia">Digite o nome do palestrante para consulta</label>
 
             </div>
-
+           
             <tbody>
+
+
                 <?php
-				$sql = "SELECT * FROM palestrantes ORDER BY palestrante ASC";
+                $sql = "SELECT * FROM palestrantes ORDER BY palestrante ASC";
 				$resultado = mysqli_query($connect, $sql);
                
                 if(mysqli_num_rows($resultado) > 0):
                 
 
-				while($dados = mysqli_fetch_array($resultado)):
+                while($dados = mysqli_fetch_array($resultado)):
+                    
 				?>
                 <tr>
                     <td><?php echo $dados['palestrante']; ?></td>
@@ -60,8 +65,11 @@ include_once 'includes/message.php';
 
 </tr>
 <?php 
+
 				endwhile;
-				else: ?>
+                else: 
+                    
+                    ?>
 
 <tr>
     <td>-</td>
@@ -71,8 +79,10 @@ include_once 'includes/message.php';
     <td>-</td>
 </tr>
 
-<?php 
-				endif;
+<?php
+
+                endif;
+                
 			   ?>
 
 </tbody>
