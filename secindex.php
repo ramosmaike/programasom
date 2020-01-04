@@ -58,9 +58,6 @@ include_once 'includes/message.php';
                     <td><?php echo $dados['ordem']; ?></td>
                     <td><?php echo $dados['caminho']; ?></td>
 
-
-
-
                     </form>
 
     </div>
